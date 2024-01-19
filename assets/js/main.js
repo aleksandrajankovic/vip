@@ -93,16 +93,16 @@ let data = {
     renderContent("dodatneNagrade", "dodatneNagrade", "nagrade-btn");
   });
 
-  var h1Elements = document.querySelectorAll('h1');
+//   var h1Elements = document.querySelectorAll('h1');
 
-if (/iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream) {
+// if (/iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream) {
 
-  h1Elements.forEach(function (h1) {
-    h1.style.fontFamily = "'Fira-Sans', sans-serif";
-  });
-} else {
+//   h1Elements.forEach(function (h1) {
+//     h1.style.fontFamily = "'Fira Sans', sans-serif";
+//   });
+// } else {
 
-  h1Elements.forEach(function (h1) {
-    h1.style.fontFamily = "'Roboto Flex', sans-serif";
-  });
-}
+//   h1Elements.forEach(function (h1) {
+//     h1.style.fontFamily = "'Roboto Flex', sans-serif";
+//   });
+// }

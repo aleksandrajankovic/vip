@@ -4,10 +4,7 @@ margin: 0;
 box-sizing: border-box;
 
 }
-@font-face {
-    font-family: 'Roboto Flex', sans-serif;
-    src: url('../font/RobotoFlex-Regular.ttf') format('truetype');
-}
+
 @font-face {
     font-family: 'Kumbh Sans Regular', sans-serif;
     src: url('../font/KumbhSans-Regular.ttf');
@@ -18,11 +15,7 @@ box-sizing: border-box;
     src: url('../font/KumbhSans-SemiBold.ttf');
    
 }
-@font-face {
-    font-family: 'Fira-Sans', sans-serif;
-    src: url('../font/KumbhSans-SemiBold.ttf');
-   
-}
+
 h1 {
     font-size: 200px;
     background: linear-gradient(180deg, #FCF5A3 0%, #F3E189 25%, #E9CC6F 50%, #BC9D63 75%, #6B5636 100%);
@@ -279,8 +272,7 @@ a {
         font-size: 100px;      
         line-height: 110px;
           padding: 0 10px;
-          font-family: 'Fira-Sans', sans-serif;
-          font-weight: 900;
+      
     }
     h3 {
         font-size: 30px;
