@@ -266,8 +266,8 @@ a {
       }
       .hero-wrapper {
   
-    gap: 370px;
-}
+         gap: 410px;
+      }
     h1 {
         font-size: 100px;      
         line-height: 102px;
