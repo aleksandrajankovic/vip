@@ -92,3 +92,17 @@ let data = {
     renderContent("rezervacijeUlaznice", "rezervacijeUlaznice", "ulaznice-btn");
     renderContent("dodatneNagrade", "dodatneNagrade", "nagrade-btn");
   });
+
+  var h1Elements = document.querySelectorAll('h1');
+
+if (/iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream) {
+
+  h1Elements.forEach(function (h1) {
+    h1.style.fontFamily = "'Fira Sans', sans-serif";
+  });
+} else {
+
+  h1Elements.forEach(function (h1) {
+    h1.style.fontFamily = "'Roboto Flex Regular', sans-serif";
+  });
+}
