@@ -37,82 +37,58 @@ let data = {
       ],
   };
   
-  function render(podatak) {
-    renderAsistent(podatak.licniAsistent[0], "licniAsistent");
-    renderBonusi(podatak.specijalniBonusi[0], "specijalniBonusi");
-  }
-  render(data);
-  
-  function renderAsistent(asistent, id) {
-    var print = `<div id="${id}">
-      <h2 class="about-naslov">${asistent.title}</h2>
-      <p>${asistent.desc}</p>
+  function generateHTML(data, id) {
+    return `<div id="${id}">
+      <h2 class="about-naslov">${data.title}</h2>
+      <p>${data.desc}</p>
     </div>`;
-    return print;
   }
   
+  function generateHTML(data, id) {
+    return `<div id="${id}">
+        <h2 class="about-naslov">${data.title}</h2>
+        <p>${data.desc}</p>
+      </div>`;
+  }
   
-  document.addEventListener("DOMContentLoaded", function () {
+  function renderContent(content, id, buttonClass) {
     const popup = document.querySelector(".popup-active");
     const popupContent = document.querySelector(".popup-content-active");
-
-    document.querySelector(".asisstent-btn").addEventListener("click", function (event) {
-        event.preventDefault();
-        popup.style.display = "block";
-        popupContent.style.display = "flex";
-
-        let asisstentData = data.licniAsistent[0];
-        let asisstentContent = renderAsistent(asisstentData, "licniAsistent");
-        popupContent.innerHTML = asisstentContent;
-
-    });
-        var noviElement = document.createElement("span");
-        noviElement.id = "close-btn";
-        popup.appendChild(noviElement);
-        noviElement.textContent = "X";
-
-        let closeBtn = document.querySelector("#close-btn");
-        closeBtn.addEventListener("click", function () {
+  
+    document.querySelector(`.${buttonClass}`).addEventListener("click", function (event) {
+      event.preventDefault();
+      popup.style.display = "block";
+      popupContent.style.display = "flex";
+  
+      let contentData = data[content][0];
+      let contentHTML = generateHTML(contentData, id);
+      popupContent.innerHTML = contentHTML;
+  
+      var closeBtn = document.createElement("span");
+      closeBtn.id = "close-btn";
+      popupContent.appendChild(closeBtn);
+      closeBtn.textContent = "X";
+  
+      closeBtn.addEventListener("click", function (event) {
+        event.stopPropagation();
         popup.style.display = "none";
+      });
     });
-        popup.addEventListener("click", function () {
-        popup.style.display = "none";
+  
+    popup.addEventListener("click", function () {
+      popup.style.display = "none";
     });
-});
-
-function renderBonusi(bonus, id1) {
-    var print = `<div id="${id1}">
-      <h2 class="about-naslov">${bonus.title}</h2>
-      <p>${bonus.desc}</p>
-    </div>`;
-    return print;
+  
+    popupContent.addEventListener("click", function (event) {
+      event.stopPropagation();
+    });
   }
   
-  
   document.addEventListener("DOMContentLoaded", function () {
-    const popup = document.querySelector(".popup-active");
-    const popupContent = document.querySelector(".popup-content-active");
-
-    document.querySelector(".bonus-btn").addEventListener("click", function (event) {
-        event.preventDefault();
-        popup.style.display = "block";
-        popupContent.style.display = "flex";
-
-        let bonusData = data.specijalniBonusi[0];
-        let bonusContent = renderBonusi(bonusData, "specijalniBonusi");
-        popupContent.innerHTML = bonusContent;
-
-    });
-        var noviElement = document.createElement("span");
-        noviElement.id = "close-btn";
-        popup.appendChild(noviElement);
-        noviElement.textContent = "X";
-
-        let closeBtn = document.querySelector("#close-btn");
-        closeBtn.addEventListener("click", function () {
-        popup.style.display = "none";
-    });
-        popup.addEventListener("click", function () {
-        popup.style.display = "none";
-    });
-});
+    renderContent("licniAsistent", "licniAsistent", "asisstent-btn");
+    renderContent("specijalniBonusi", "specijalniBonusi", "bonus-btn");
+    renderContent("limiti", "limiti", "limit-btn");
+    renderContent("rezervacijeAvion", "rezervacijeAvion", "rezervacije-btn");
+    renderContent("rezervacijeUlaznice", "rezervacijeUlaznice", "ulaznice-btn");
+    renderContent("dodatneNagrade", "dodatneNagrade", "nagrade-btn");
+  });
