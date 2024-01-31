@@ -187,16 +187,16 @@ a {
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: #A80000; 
-    border-radius: 0.6rem;
+    border-radius: 1rem;
     width: 30%;
     height: auto;
     overflow: hidden;
+    border: 2px solid #EBCE6F;
+    padding: 2rem;
 }
 .popup-box {
-    border: 3px solid;
-    border-image: linear-gradient(180deg, #F2E089 53.5%, #79623E 100%);
-    border-image-slice: 1;
-    padding: 2rem;
+
+
     text-align: center;
 }
 
