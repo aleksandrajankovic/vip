@@ -112,7 +112,7 @@ a {
     color: #fff;
 }
 .icons {
-    margin: 150px auto 113px auto;
+    margin: 120px auto 113px auto;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     width: 60%;
@@ -144,11 +144,10 @@ a {
 }
 
 .text-box-3 p {
-    font-family:'Kumbh Sans Regular', sans-serif;
-    font-size: 24px;
-    font-weight: 400;
-    line-height: 40px;
-    letter-spacing: 0em;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 200;
+    line-height: 29px;
     text-align: center;
     color: #fff;
 }
