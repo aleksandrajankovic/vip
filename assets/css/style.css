@@ -142,7 +142,10 @@ a {
     color: #ebce6fc9;
 
 }
-
+.text-box-3 {
+    width: 70%;
+    margin: 0 auto;
+}
 .text-box-3 p {
     font-family: 'Kumbh Sans', sans-serif;
     font-size: 20px;
