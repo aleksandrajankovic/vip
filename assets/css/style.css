@@ -158,15 +158,12 @@ a {
     display: none;
   }
   #close-btn {
-    color: #FFF;
-    float: right;
-    margin-left: 5px;
     position: absolute;
-    top: 6px;
-    right: 15px;
-    font-size: 20px;
-    font-weight: 600;
+    top: 30px;
+    right: 40px;
     cursor: pointer;
+    width: 2%;
+    height: auto;
   }
   
   .popup-active {
@@ -188,60 +185,38 @@ a {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(188, 157, 99, 0.9); 
+    background-color: #A80000; 
     border-radius: 0.6rem;
-    border: 2px solid var(--purple-light);
-    width: 60%;
+    width: 50%;
     height: auto;
     overflow: hidden;
 }
-
-  .about-naslov {
-    font-size: 3rem;
-    color: var(--secondary);
-    text-align: center;
-    margin: 3rem 0 5rem 0;
-  }
-
-  #about {
-    background-color: var(--white);
-    border-radius: 0.6rem;
-    display: flex;
-    flex-direction: column;
-    padding: 4rem;
-    width: 50%;
-    justify-content: start;
-  }
- 
-  #about h5 {
-    font-size: 2rem;
-    text-align: center;
+.popup-box {
+    border: 9px solid;
+    border-image: linear-gradient(180deg, #F2E089 53.5%, #79623E 100%);
+    border-image-slice: 1;
+    padding: 3rem;
+}
+  .popup-box h2 {
+    font-size: 48px;
+    font-weight: 700;
+    color: #EBCE6F;
+    text-align: left;
+    font-family: 'Kumbh Sans SemiBold', sans-serif;
     text-transform: uppercase;
-    color: var(--white);
-    margin-bottom: 2rem;
+    margin: 1.5rem 0;
   }
-  
-  #about p {
-    font-size: 1.8rem;
-    text-align: justify;
-    padding-bottom: 2rem;
-    color: var(--text-color);
-    margin-bottom: 2rem;
-  }
-  
-  #about .text {
-    width: 70%;
-  }
-  #about .giga-text {
-    font-size: 190px;
-    position: absolute;
-    opacity: 0.07;
-    font-family: League Spartan, Helvetica, Arial, sans-serif;
-    z-index: 0;
-    top: -10px;
-    left: 100px;
-    color: #4a4a4a;
-  }
+.popup-box p {
+    font-family: 'Merriweather Sans', sans-serif;
+    font-size: 40px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 50px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #fff;
+}
+
 
   /*RESPONSIVE DESIGN */
   @media screen and (min-width: 2000px) {
@@ -255,7 +230,12 @@ a {
         width: 45%;
     }
   }
+  @media screen and (max-width: 1200px) {
+    .popup-content-active {
+        width: 80%;
+    }
 
+  }
   @media screen and (max-width: 768px) {
       .logo {
           width: 50%;
@@ -319,11 +299,44 @@ a {
         height: 800px;
         
     }
+    .popup-box h2 { 
+        font-size: 40px;
+    }
+    .popup-box p {
+        font-size: 32px;
+    }
+    #close-btn {
+        width: 3%;
+    }
   }
+  @media screen and (max-width: 490px){
+.popup-content-active {
+    width: 95%;
+}
+.popup-box {
+    padding: 2rem;
+}
+.popup-box h2 { 
+    font-size: 32px;
+}
+.popup-box p {
+    font-size: 26px;
+    line-height: 35px;
+}
+.popup-box img {
+    height: 120px;
+}
+#close-btn {
+    width: 4%;
+}
+}
   @media screen and (max-width: 376px) {
 .text-box-1 h4 {
     font-size: 24px;
     line-height: 27px;
     margin: 20px 0;
+}
+.popup-box {
+    padding: 1.5rem;
 }
   }

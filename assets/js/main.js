@@ -2,55 +2,56 @@ let data = {
     licniAsistent: [
       {
         title: "Lični asistent",
-        desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore commodi reprehenderit nisi odio ex quod, ut aperiam quis ducimus saepe, provident laborum nobis accusamus fugiat quasi cupiditate! Libero, quasi alias.",
+        desc: "Vaš saveznik za efikasnost i olakšanje. Osećajte se sigurno u svakom trenutku.",
+        image: "../../assets/icons/icon-1.svg"
       },
     ],
     specijalniBonusi: [
       {
         title: "Specijalni bonusi",
-        desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore commodi reprehenderit nisi odio ex quod, ut aperiam quis ducimus saepe, provident laborum nobis accusamus fugiat quasi cupiditate! Libero, quasi alias.",
+        desc: "Preuzmite ekskluzivne bonus pakete. Uživajte u posebno prilagođenim nagradama samo za vas.",
+        image: "../../assets/icons/icon-2.svg"
       },
     ],
     limiti: [
         {
           title: "VEĆI LIMITI ISPLATA",
-          desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore commodi reprehenderit nisi odio ex quod, ut aperiam quis ducimus saepe, provident laborum nobis accusamus fugiat quasi cupiditate! Libero, quasi alias.",
+          desc: "Pružamo vam posebnu priliku da otvorite put ka većim sumama i povećanim limitom podizanja novca.",
+          image: "../../assets/icons/icon-3.svg"
         },
       ],
       rezervacijeAvion: [
         {
           title: "REZERVACIJE AVIONSKIH KARATA",
-          desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore commodi reprehenderit nisi odio ex quod, ut aperiam quis ducimus saepe, provident laborum nobis accusamus fugiat quasi cupiditate! Libero, quasi alias.",
+          desc: "Samo jedan upit je dovoljan – omogućavamo brzu i efikasnu avionsku rezervaciju za VIP klijente.",
+          image: "../../assets/icons/icon-4.svg"
         },
       ],
       rezervacijeUlaznice: [
         {
           title: "REZERVACIJE ULAZNICA",
-          desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore commodi reprehenderit nisi odio ex quod, ut aperiam quis ducimus saepe, provident laborum nobis accusamus fugiat quasi cupiditate! Libero, quasi alias.",
+          desc: "Pružamo privilegovanu mogućnost rezervacije ulaznica za VIP klijente - pošaljite upit i garantujemo vam mesto.",
+          image: "../../assets/icons/icon-5.svg"
         },
       ],
       dodatneNagrade: [
         {
           title: "DODATNE NAGRADE",
-          desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore commodi reprehenderit nisi odio ex quod, ut aperiam quis ducimus saepe, provident laborum nobis accusamus fugiat quasi cupiditate! Libero, quasi alias.",
+          desc: "Nadmašujemo vaša očekivanja. Budite spremni za nova iznenađenja i nagrade koje će vas očarati.",
+          image: "../../assets/icons/icon-6.svg"
         },
       ],
   };
   
-  function generateHTML(data, id) {
-    return `<div id="${id}">
-      <h2 class="about-naslov">${data.title}</h2>
-      <p>${data.desc}</p>
+  function generateHTML(contentData, id) {
+    return `<div class="popup-box" id="${id}">
+  <img class="popup-icon" src="${contentData.image}"/>
+      <h2 class="about-naslov">${contentData.title}</h2>
+      <p>${contentData.desc}</p>
     </div>`;
   }
   
-  function generateHTML(data, id) {
-    return `<div id="${id}">
-        <h2 class="about-naslov">${data.title}</h2>
-        <p>${data.desc}</p>
-      </div>`;
-  }
-  
+
   function renderContent(content, id, buttonClass) {
     const popup = document.querySelector(".popup-active");
     const popupContent = document.querySelector(".popup-content-active");
@@ -64,10 +65,10 @@ let data = {
       let contentHTML = generateHTML(contentData, id);
       popupContent.innerHTML = contentHTML;
   
-      var closeBtn = document.createElement("span");
+      var closeBtn = document.createElement("img");
       closeBtn.id = "close-btn";
+      closeBtn.src = "../../assets/icons/CLOSE-02 1.png"; 
       popupContent.appendChild(closeBtn);
-      closeBtn.textContent = "X";
   
       closeBtn.addEventListener("click", function (event) {
         event.stopPropagation();
@@ -93,16 +94,3 @@ let data = {
     renderContent("dodatneNagrade", "dodatneNagrade", "nagrade-btn");
   });
 
-//   var h1Elements = document.querySelectorAll('h1');
-
-// if (/iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream) {
-
-//   h1Elements.forEach(function (h1) {
-//     h1.style.fontFamily = "'Fira Sans', sans-serif";
-//   });
-// } else {
-
-//   h1Elements.forEach(function (h1) {
-//     h1.style.fontFamily = "'Roboto Flex', sans-serif";
-//   });
-// }
