@@ -71,39 +71,43 @@ a {
 .wrapper {
  
     width: 80%;
-    margin: 100px auto 0 auto;
+    margin: 0 auto;
     padding-bottom: 100px;
 }
 .logo {
     margin: 20px 0;
 }
 .text-box-1 {
-    padding: 20px 0;
+    padding: 20px 0 0 0;
 }
 .text-box-1 p {
-    font-family: 'Kumbh Sans Regular', sans-serif;
-    font-size: 28px;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 200;
     line-height: 29px;
     text-align: center;
     color: #fff;
 }
 .text-box-1 h4 {
-    font-family: 'Kumbh Sans SemiBold', sans-serif;
-    font-size: 36px;
-    line-height: 37px;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 55px;
+    font-weight: 200;
+    line-height: 60px;
     text-align: center;
     background: linear-gradient(0deg, #FFFCAC, #FFFCAC);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin: 20px 0;
+    margin: 45px 0;
 }
 .text-box-2 {
-    margin-top: 53px;
+    width: 70%;
+    margin: 0 auto;
 }
 .text-box-2 p {
-    font-family: 'Kumbh Sans Regular', sans-serif;
-    font-size: 28px;
-    line-height: 40px;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 200;
+    line-height: 30px;
     text-align: center;
     color: #fff;
 }
@@ -115,9 +119,10 @@ a {
     gap: 80px;
 }
 .icons img {
-    height: 170px;
+    height: 120px;
     margin-bottom: 20px;
     filter: drop-shadow(8px 15px 20px rgba(0, 0, 0, 0.25));
+    opacity: 0.7;
 }
 
 .icon-box {
@@ -128,13 +133,13 @@ a {
     text-align: center; 
 }
 .icon-box p {
-    font-family:'Kumbh Sans Regular', sans-serif;
+    font-family: 'Kumbh Sans Regular', sans-serif;
     font-size: 21px;
-    font-weight: 600;
+    font-weight: 200;
     line-height: 26px;
     letter-spacing: 0em;
     text-align: center;
-    color: #EBCE6F;
+    color: #ebce6fc9;
 
 }
 
