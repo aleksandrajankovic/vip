@@ -302,12 +302,7 @@ a {
         height: 800px;
         
     }
-    /* .popup-box h2 { 
-        font-size: 40px;
-    }
-    .popup-box p {
-        font-size: 32px;
-    } */
+   
     .popup-box img {
         height: 60px;
     }
@@ -322,19 +317,7 @@ a {
 .popup-box {
     padding: 2rem;
 }
-/* .popup-box h2 { 
-    font-size: 32px;
-}
-.popup-box p {
-    font-size: 26px;
-    line-height: 35px;
-} 
-.popup-box img {
-    height: 120px;
-}
-#close-btn {
-    width: 4%;
-}*/
+
 }
   @media screen and (max-width: 376px) {
 .text-box-1 h4 {
