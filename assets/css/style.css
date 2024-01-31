@@ -187,6 +187,7 @@ a {
     transform: translate(-50%, -50%);
     background-color: #A80000; 
     border-radius: 0.6rem;
+    width: 35%;
     height: auto;
     overflow: hidden;
 }
@@ -232,9 +233,15 @@ a {
         width: 45%;
     }
   }
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1700px) {
     .popup-content-active {
-        width: 80%;
+        width: 40%;
+    }
+
+  }
+  @media screen and (max-width: 1500px) {
+    .popup-content-active {
+        width: 55%;
     }
 
   }
