@@ -3,42 +3,42 @@ let data = {
       {
         title: "Lični asistent",
         desc: "Vaš saveznik za efikasnost i olakšanje. Osećajte se sigurno u svakom trenutku.",
-        image: "../../assets/icons/icon-1.svg"
+        image: "assets/icons/icon-1.svg"
       },
     ],
     specijalniBonusi: [
       {
         title: "Specijalni bonusi",
         desc: "Preuzmite ekskluzivne bonus pakete. Uživajte u posebno prilagođenim nagradama samo za vas.",
-        image: "../../assets/icons/icon-2.svg"
+        image: "assets/icons/icon-2.svg"
       },
     ],
     limiti: [
         {
           title: "VEĆI LIMITI ISPLATA",
           desc: "Pružamo vam posebnu priliku da otvorite put ka većim sumama i povećanim limitom podizanja novca.",
-          image: "../../assets/icons/icon-3.svg"
+          image: "assets/icons/icon-3.svg"
         },
       ],
       rezervacijeAvion: [
         {
           title: "REZERVACIJE AVIONSKIH KARATA",
           desc: "Samo jedan upit je dovoljan – omogućavamo brzu i efikasnu avionsku rezervaciju za VIP klijente.",
-          image: "../../assets/icons/icon-4.svg"
+          image: "assets/icons/icon-4.svg"
         },
       ],
       rezervacijeUlaznice: [
         {
           title: "REZERVACIJE ULAZNICA",
           desc: "Pružamo privilegovanu mogućnost rezervacije ulaznica za VIP klijente - pošaljite upit i garantujemo vam mesto.",
-          image: "../../assets/icons/icon-5.svg"
+          image: "assets/icons/icon-5.svg"
         },
       ],
       dodatneNagrade: [
         {
           title: "DODATNE NAGRADE",
           desc: "Nadmašujemo vaša očekivanja. Budite spremni za nova iznenađenja i nagrade koje će vas očarati.",
-          image: "../../assets/icons/icon-6.svg"
+          image: "assets/icons/icon-6.svg"
         },
       ],
   };
@@ -67,7 +67,7 @@ let data = {
   
       var closeBtn = document.createElement("img");
       closeBtn.id = "close-btn";
-      closeBtn.src = "../../assets/icons/CLOSE-02 1.png"; 
+      closeBtn.src = "assets/icons/CLOSE-02 1.png"; 
       popupContent.appendChild(closeBtn);
   
       closeBtn.addEventListener("click", function (event) {
