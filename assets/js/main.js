@@ -3,7 +3,7 @@ let data = {
       {
         title: "Lični asistent",
         desc: "Vaš saveznik za efikasnost i olakšanje. Osećajte se sigurno u svakom trenutku.",
-        image: "../../assets/icons/icon-1.svg"
+        image: "./icons/icon-1.svg"
       },
     ],
     specijalniBonusi: [
