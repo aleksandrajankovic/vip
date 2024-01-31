@@ -67,7 +67,7 @@ let data = {
   
       var closeBtn = document.createElement("img");
       closeBtn.id = "close-btn";
-      closeBtn.src = "../../assets/icons/CLOSE-02 1.png"; 
+      closeBtn.src = "assets/icons/CLOSE-02 1.png"; 
       popupContent.appendChild(closeBtn);
   
       closeBtn.addEventListener("click", function (event) {
