@@ -58,6 +58,11 @@ let data = {
   
     document.querySelector(`.${buttonClass}`).addEventListener("click", function (event) {
       event.preventDefault();
+  
+      if (popup.classList.contains("show")) {
+        return;
+      }
+  
       popup.style.display = "block";
       popupContent.style.display = "flex";
   
@@ -72,18 +77,39 @@ let data = {
   
       closeBtn.addEventListener("click", function (event) {
         event.stopPropagation();
-        popup.style.display = "none";
+  
+        setTimeout(function() {
+          popup.style.display = "none";
+        }, 300);
+  
+        setTimeout(function() {
+          popup.classList.remove("show");
+          popupContent.classList.remove("show");
+        }, 10);
       });
+  
+      setTimeout(function() {
+        popup.classList.add("show");
+        popupContent.classList.add("show");
+      }, 10);
     });
   
     popup.addEventListener("click", function () {
-      popup.style.display = "none";
+      setTimeout(function() {
+        popup.style.display = "none";
+      }, 300);
+  
+      setTimeout(function() {
+        popup.classList.remove("show");
+        popupContent.classList.remove("show");
+      }, 10);
     });
   
     popupContent.addEventListener("click", function (event) {
       event.stopPropagation();
     });
   }
+  
   
   document.addEventListener("DOMContentLoaded", function () {
     renderContent("licniAsistent", "licniAsistent", "asisstent-btn");
