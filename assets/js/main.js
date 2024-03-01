@@ -41,8 +41,38 @@ let data = {
           image: "assets/icons/icon-6.svg"
         },
       ],
+      rankingSystem: {
+        silver: {
+          head : "VIP SILVER",
+          deposit: "deposit",
+          prise:" 50.000 rsd - 99.999 rsd",
+          bulletOne: "Mesečni bonusi ",
+          bulletTwo: "Rakeback ",
+          bulletThree: "Nedeljni bonusi"
+        },
+        gold: {
+          head : "VIP GOLD",
+          deposit: "deposit",
+          prise:" 100.000 rsd - 249.999 rsd",
+          bulletOne: "Nedeljni cashback ",
+          bulletTwo: "Mesečni bonus paketi ",
+          bulletThree: "Rakeback",
+          bulletFour: "Nedeljni bonusi"
+        },
+        platinum: {
+          head : "VIP PLATINUM",
+          deposit: "deposit",
+          prise:" > 250.000 rsd",
+          bulletOne: "Nedeljni cashback ",
+          bulletTwo: "Mesečni bonus paketi ",
+          bulletThree: "Rakeback",
+          bulletFour: "Nedeljni bonusi",
+          bulletFive: "Rast bonusa"
+        },
+        
+      }
   };
-  
+  /*POPUP*/
   function generateHTML(contentData, id) {
     return `<div class="popup-box" id="${id}">
   <img class="popup-icon" src="${contentData.image}"/>
@@ -109,7 +139,7 @@ let data = {
       event.stopPropagation();
     });
   }
-  
+
   
   document.addEventListener("DOMContentLoaded", function () {
     renderContent("licniAsistent", "licniAsistent", "asisstent-btn");
@@ -120,3 +150,46 @@ let data = {
     renderContent("dodatneNagrade", "dodatneNagrade", "nagrade-btn");
   });
 
+  function generateHTMLRanking(rankingData) {
+    let html = '';
+    
+    for (let rank in rankingData) {
+      html += `<div class="box">
+        <div class="head"><h4>${rankingData[rank].head}</h4></div>
+        <div class="body-box">
+        <div class="prise"><p>${rankingData[rank].prise}</p></div>
+        <div class="deposit"><p>${rankingData[rank].deposit}</p></div>
+        <div class="list">
+        <ul>`;
+      
+  
+      if (rankingData[rank].bulletOne !== undefined) {
+        html += `<li class="list-box"><img src="/assets/icons/bullet.svg" alt="Icon">${rankingData[rank].bulletOne}</li>`;
+      }
+      if (rankingData[rank].bulletTwo !== undefined) {
+        html += `<li class="list-box"><img src="/assets/icons/bullet.svg" alt="Icon">${rankingData[rank].bulletTwo}</li>`;
+      }
+      if (rankingData[rank].bulletThree !== undefined) {
+        html += `<li class="list-box"><img src="/assets/icons/bullet.svg" alt="Icon">${rankingData[rank].bulletThree}</li>`;
+      }
+      if (rankingData[rank].bulletFour !== undefined) {
+        html += `<li class="list-box"><img src="/assets/icons/bullet.svg" alt="Icon">${rankingData[rank].bulletFour}</li>`;
+      }
+      if (rankingData[rank].bulletFive !== undefined) {
+        html += `<li class="list-box"><img src="/assets/icons/bullet.svg" alt="Icon">${rankingData[rank].bulletFive}</li>`;
+      }
+      
+      html += `</ul></div>
+        </div>
+      </div>`;
+    }
+    
+    return html;
+  }
+  
+  document.addEventListener("DOMContentLoaded", function () {
+    const rankingSystemContainer = document.querySelector(".ranking-system");
+  
+    rankingSystemContainer.innerHTML = generateHTMLRanking(data.rankingSystem);
+  });
+  
