@@ -63,7 +63,7 @@ ul {
     justify-content: space-between;
     align-items: center;
     height: 100%;
-    gap: 500px
+    gap: 560px
 }
 .hero-elements {
     display: flex;
@@ -165,10 +165,10 @@ ul {
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    padding: 4rem 0px;
+    padding: 5rem 0px;
     background-color: #4C0000;
 }
-/*RANKING STYLINF*/
+/*RANKING STYLING*/
 .head {
     border-radius: 20px 20px 0 0;
     background: linear-gradient(67.25deg, rgba(191, 160, 101, 0.85) 2.87%, rgba(235, 206, 111, 0.85) 36.7%, rgba(235, 206, 111, 0.85) 66.63%, rgba(191, 160, 101, 0.85) 94.98%);
@@ -220,7 +220,7 @@ ul {
 .list-box {
     display: flex;
     align-items: center;
-    gap: 0.3rem;
+    gap: 1rem;
 }
 .list li {
     font-family: "Kumbh Sans", sans-serif;
@@ -270,7 +270,8 @@ ul {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #A80000;
+    background: linear-gradient(180deg, #A60303 20.22%, #760000 79.69%);
+
     border-radius: 2rem;
     width: 30%;
     height: auto;
@@ -292,7 +293,7 @@ ul {
 }
 
 .popup-box h2 {
-    font-size: 36px;
+    font-size: 28px;
     font-weight: 400;
     color: #EBCE6F;
     text-align: center;
@@ -303,9 +304,9 @@ ul {
 
 .popup-box p {
     font-family: 'Kumbh Sans', sans-serif;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 300;
-    line-height: 33px;
+    line-height: 24px;
     letter-spacing: 0em;
     text-align: center;
     color: #fff;
@@ -321,7 +322,6 @@ footer {
     height: auto;
     text-indent: 0;
     background-color: #2F0104;
-    padding: 2rem;
   }
 
 
@@ -348,7 +348,6 @@ footer {
     display: block;
     width: 100%;
     height: auto;
-    margin: 10px 0;
     text-align: center;
     overflow: hidden;
     background-color: #4C0000;
@@ -361,7 +360,7 @@ footer {
     width: auto;
     margin: 0 10px;
     color: #ccc;
-    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    font-family: "Kumbh Sans", sans-serif;
     font-size: 12px;
     font-weight: 600;
     text-align: center;
@@ -473,14 +472,15 @@ display: inline-block;
     width: 100%;
     height: auto;
     padding: 10px 0;
-    color: #fff;
+    color: rgb(204, 204, 204);
     font-size: 11px;
     text-transform: uppercase;
     text-align: center;
+    font-family: "Kumbh Sans", sans-serif;
   }
 
   #legal a {
-    color: #fff;
+    color: rgb(204, 204, 204);
     text-decoration: none;
   }
 
@@ -508,10 +508,39 @@ display: inline-block;
     }
     .text-box-1 {
         padding: 130px 0 0 0;
+        width: 80%;
+    }
+    .wrapper {
+        width: 80%;
+    }
+    .logo {
+        width: 60%;
+        margin: 10px 0;
+    }
+    .crown {
+        width: 30%;
+        margin-bottom: 10px;
+    }
+    h1 {
+        font-size: 115px;
+        line-height: 120px;
+    }
+    h3 {
+        font-size: 35px;
+        line-height: 38px;
+    }
+    .hero-wrapper {
+        gap: 250px;
+    }
+  }
+  @media screen and (max-width: 1200px) {
+   
+    .wrapper {
+        width: 80%;
     }
 
   }
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: 920px) {
       .logo {
           width: 50%;
       }
@@ -545,7 +574,7 @@ display: inline-block;
         margin: 20px 0;
     }
     .wrapper {
-        width: 90%;
+        width: 80%;
         margin: 50px auto 0 auto;
         padding-bottom: 100px;
     }
@@ -592,13 +621,13 @@ display: inline-block;
 
     }
     .popup-box h2 {
-        font-size: 32px;
+        font-size: 24px;
     }
     .box {
         width: 70%;
     }
     .prise p {
-        font-size: 20px;
+        font-size: 16px;
     }
   
 }
